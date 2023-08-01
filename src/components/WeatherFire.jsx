@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../styles/Weather.css";
+import "../styles/WeatherFire.css";
 
 const WeatherFire = () => {
     const [city, setCity] = useState("");
@@ -42,6 +42,7 @@ const WeatherFire = () => {
 
     return (
         <main className="grid-wrapper">
+
             <div className="grid-item">
                 <form onSubmit={handleSubmit}>
                     <label className="weather-input">
