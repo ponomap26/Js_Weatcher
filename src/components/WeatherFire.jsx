@@ -32,15 +32,7 @@ const WeatherFire = () => {
         getWeatherData();
     };
 
-    const handleTodayWeather = () => {
-        setTodayWeatherData(weatherData[0]);
-        setWeatherData(null);
-    };
 
-    const handleFiveDayWeather = () => {
-        setWeatherData(weatherData);
-        setTodayWeatherData(null);
-    };
 
     useEffect(() => {
         if (weatherData) {
@@ -57,11 +49,8 @@ const WeatherFire = () => {
                         <input type="text" value={city} onChange={handleCityChange} />
                     </label>
 
-                    <button className="weather-button" onClick={handleTodayWeather}>
-                        Получить погоду на сегодня
-                    </button>
-                    <button className="weather-button" onClick={handleFiveDayWeather}>
-                        Получить погоду на 5 дней
+                    <button className="weather-button" onClick={todayWeatherData}>
+                        Получить данные о погоде в {city}
                     </button>
                 </form>
 
