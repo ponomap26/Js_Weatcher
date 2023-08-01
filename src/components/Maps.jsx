@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {YMaps, Map, Placemark} from "react-yandex-maps";
-
+import "../styles/Maps.css";
 
 const Maps = () => {
     const [userCity, setUserCity] = useState(null);
@@ -27,9 +27,9 @@ const Maps = () => {
     }, []);
 
     return (
-        <div style={{height: "60px", marginTop: "40px"}}>
+        <div className="map-container" >
             <YMaps>
-                <Map defaultState={{center: [55.751574, 37.573856], zoom: 10}} width="80%">
+                <Map defaultState={{center: [55.751574, 37.573856], zoom: 10}} width="80%" className="map">
                     {userCity && (
                         <Placemark
                             geometry={[55.751574, 37.573856]}
